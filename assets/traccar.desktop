@@ -1,0 +1,11 @@
+[Desktop Entry]
+Version=2.0
+Name=Traccar Journal
+Comment=Hantera körjournaler från Traccar
+# Ändra sökvägarna nedan till din faktiska mapp!
+Exec=python3 /home/christer/traccar_python/main.py
+Icon=/home/christer/traccar_python/org.gnome.Maps.png
+Terminal=false
+Type=Application
+Categories=Utility;
+StartupWMClass=TraccarJournal
