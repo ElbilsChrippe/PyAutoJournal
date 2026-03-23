@@ -29,22 +29,9 @@ Applikationen följer en tydlig arkitektur för att separera logik från använd
 * **Logik-lager (`src/data_manager.py`):** Fungerar som "hjärnan" i applikationen. Den koordinerar datahämtning, adressuppslagningar och bearbetning.
 * **Datakällor (`src/data_fetcher.py`, `src/data_processor.py`):** Hanterar rådata från API:er och databaser samt omvandlar det till läsbara reseloggar.
 
-## Projektstruktur
-```text
-PyAutoJournal/
-├── assets/             # Bilder, ikoner och logotyper
-├── src/                # All källkod (motorn i appen)
-│   ├── __init__.py     # Gör mappen till ett Python-paket
-│   ├── gui_handler.py  # Huvudapplikationen
-│   ├── data_manager.py # Datakoordinering
-│   └── ...
-├── tests/              # Enhetstester för att säkerställa stabilitet
-├── main.py             # Startpunkt för applikationen
-├── config.json         # Konfigurationsfil
-├── requirements.txt    # Beroenden
-└── README.md
-
 ## 🚀 Installation
+Insatallera från grunden genom att följa dessa steg:
+
 1. Klona repot: `git clone https://github.com/ditt-anvandarnamn/PyAutoJournal.git`
 2. Installera beroenden: `pip install -r requirements.txt`
 3. Starta programmet: `python main.py`
