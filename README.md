@@ -2,13 +2,25 @@
 
 PyAutoJournal är ett grafiskt verktyg (byggt i Python/Tkinter) för att automatiskt hämta, kategorisera och exportera körjournaler från GPS-källor som **Traccar** och **TeslaMate**. Perfekt för att skapa körjournaler för Skatteverket med minimal handpåläggning.
 
-## 📸 Gränssnitt
-*Här kan du lägga in dina skärmdumpar senare genom att ersätta länkarna nedan:*
-![Huvudvy - Journal](https://via.placeholder.com/800x450?text=Skärmdump+Journalvy)
-*Huvudvyn med alla resor och miniatyrkartor.*
+## ✨ Nyckelfunktioner
+* **Dual-Source Support:** Växla sömlöst mellan TeslaMate och Traccar.
+* **Intelligent Statusbar:** Realtidsfeedback med färgkodade indikatorer för:
+    * 🟢 **Konfig OK:** Allt är sparat och redo.
+    * 🔴 **Osparade ändringar:** Varning om ändringar i inställningar eller session.
+    * ⚙️ **Arbetar:** Visar när nätverksanrop eller filskrivning pågår.
+* **Auto-Kategorisering:** Definiera zoner (t.ex. "Hem", "Kontor") för automatisk märkning av tjänsteresor vs. privatresor.
+* **Robust Export:** PDF-rapporter med inbäddade kartor, optimerade för utskrift.
+* **Trådsäker hantering:** Bakgrundshämtning av data så att gränssnittet aldrig fryser.
 
-![Detaljvy - Karta](https://via.placeholder.com/800x450?text=Skärmdump+Detaljvy)
-*Detaljerad ruttvisning med interaktiv karta.*
+## 📸 Skärmdumpar
+![Huvudvy](assets/main_window_empty.png)
+![Huvudvy med data](assets/main_window_API_get.png)
+![Detaljerad Vy rutt](assets/detailed_view_data_on_route.png)
+![Export Huvudvy](assets/export_overview.png)
+![Export HTML](assets/export_html.png)
+![Inställningar Huvudvy](assets/configuration_main.png)
+![Inställningar Autozon](assets/configuration_autozone.png)
+
 
 ## Arkitektur & Design
 Applikationen följer en tydlig arkitektur för att separera logik från användargränssnitt, vilket gör projektet lätt att underhålla och vidareutveckla.
@@ -31,12 +43,6 @@ PyAutoJournal/
 ├── config.json         # Konfigurationsfil
 ├── requirements.txt    # Beroenden
 └── README.md
-
-## ✨ Funktioner
-* **Multi-Source:** Stöd för Traccar API och TeslaMate (PostgreSQL).
-* **Auto-Kategorisering:** Definiera zoner (Hemma, Jobbet) för automatisk taggning.
-* **Smart Export:** Skapar professionella PDF-rapporter redo för redovisning.
-* **Kartstöd:** Interaktiva kartor via OpenStreetMap.
 
 ## 🚀 Installation
 1. Klona repot: `git clone https://github.com/ditt-anvandarnamn/PyAutoJournal.git`
