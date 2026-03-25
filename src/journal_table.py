@@ -653,8 +653,6 @@ class JournalTable:
                 trip_data["is_work_saved"] = is_now_work
                 trip_data["Tjänst"] = "TJÄNST" if is_now_work else "PRIVAT"
                 logger.info(f"Synkade tabelländring till minnet för rutt {item}")
-                if self.parent_app:
-                    self.parent_app.mark_journal_unsaved()
 
     def edit_cell(self, row_id, col_index):
         """
@@ -709,8 +707,6 @@ class JournalTable:
             # 2. Logga och synka
             logger.debug(f"Anropar _sync_to_manager för ID {row_id}")
             self._sync_to_manager(row_id, "notering", new_val)
-            if self.parent_app:
-                self.parent_app.mark_journal_unsaved()
 
         editor.bind("<Return>", save)
         editor.bind("<FocusOut>", save)

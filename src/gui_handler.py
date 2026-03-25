@@ -1106,6 +1106,7 @@ class PyAutoJournal:
 
         # När fönstret stängts, uppdatera förhandsvisningen i inställningarna och spara
         self.update_settings_zones_preview()
+        config = self.data_manager.get_config()
         self.data_manager.save_config(config)
 
 
