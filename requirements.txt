@@ -1,6 +1,40 @@
-psycopg2-binary
-requests
-folium
-pdfkit
-tkintermapview
-Pillow
+###############################################################################
+# PyAutoJournal - Requirements
+###############################################################################
+
+# --- GUI & Gränssnitt ---
+customtkinter==5.2.2       # Moderniserade Tkinter-widgets (Dark Mode stöd)
+darkdetect==0.8.0          # Detekterar OS-inställning för ljust/mörkt tema
+pyperclip==1.11.0          # Hantering av urklipp (copy-paste)
+Pillow==12.1.1             # Bildhantering för ikoner och kartor
+
+# --- Kartor & Geografi ---
+tkintermapview==1.29       # Den interaktiva kartan i GUI-fönstret
+folium==0.20.0             # Genererar HTML-kartor för PDF-export
+branca==0.8.2              # Hjälpbibliotek för Folium (HTML-rendering)
+xyzservices==2025.11.0     # Hanterar olika kartleverantörer (tiles)
+geocoder==1.38.1           # Omvandlar koordinater till adresser (Reverse Geocoding)
+ratelim==0.1.6             # Begränsar API-anrop för att inte bli blockerad
+
+# --- Databaser & API ---
+psycopg2-binary==2.9.11    # PostgreSQL-drivrutin för TeslaMate
+requests==2.32.5           # HTTP-klient för anslutning till Traccar API
+charset-normalizer==3.4.6  # Teckenkodning för API-svar
+
+# --- Rapportgenerering (HTML till PDF) ---
+pdfkit==1.0.0              # Konverterar körjournalen från HTML till PDF
+Jinja2==3.1.6              # Mallmotor för att bygga export-HTML
+MarkupSafe==3.0.3          # Säker hantering av HTML-strängar
+
+# --- System & Kompilering ---
+pyinstaller==6.19.0        # Skapar .exe eller körbar fil av programmet
+pyinstaller-hooks-contrib==2026.3 # Extra stöd för bibliotek vid paketering
+altgraph==0.17.5           # Används av PyInstaller för att analysera beroenden
+packaging==26.0            # Hantering av versioner och paketnamn
+
+# --- Övriga hjälpbibliotek ---
+numpy==2.4.3               # Beräkningar (krävs ofta av kartmotorer/datahantering)
+click==8.3.1               # Hantering av kommandoradsargument
+decorator==5.2.1           # Underlättar funktionsmodifieringar
+future==1.0.0              # Kompatibilitetslager
+six==1.17.0                # Python 2/3 kompatibilitet (krävs av vissa äldre paket)
